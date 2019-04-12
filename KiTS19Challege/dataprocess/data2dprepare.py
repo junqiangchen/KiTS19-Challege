@@ -140,9 +140,9 @@ def proKitsdata():
     path_list = file_name_path(kits_path)
     kits_Spacings = getImageSpacing()
     # step3 get signal train image and mask
-    for subsetindex in range(160, 161, 1):
-        # kits_subset_path = kits_path + "/" + str(path_list[subsetindex]) + "/"
-        kits_subset_path = kits_path + "/" + "case_00160" + "/"
+    for subsetindex in range(len(path_list)):
+        kits_subset_path = kits_path + "/" + str(path_list[subsetindex]) + "/"
+        # kits_subset_path = kits_path + "/" + "case_00160" + "/"
         file_image = kits_subset_path + image_name
         # 1 load itk image and truncate value with upper and lower
         src = load_itkfilewithtrucation(file_image, 300, -200)
