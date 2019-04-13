@@ -25,7 +25,7 @@
 
 ## Contact
 * https://github.com/junqiangchen
-* email: 1207173174@qq.com，yixuanwang@hust.edu.cn
-* Contact: junqiangChen，yixuanWang（王艺璇）
+* email: 1207173174@qq.com，yixuanwang@hust.edu.cn,1259389904@qq.com
+* Contact: junqiangChen，yixuanWang（王艺璇）,junMa(马骏)
 * WeChat Number: 1207173174
 * WeChat Public number: 最新医学影像技术
