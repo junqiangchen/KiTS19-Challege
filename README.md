@@ -2,6 +2,16 @@
 > This is an example of the CT images Kidney Tumor Segmentation
 ![](KiTS19_header.png)
 
+## Prerequisities
+The following dependencies are needed:
+- numpy >= 1.11.1
+- SimpleITK >=1.0.1
+- opencv-python >=3.3.0
+- tensorflow-gpu ==1.0.0
+- pandas >=0.20.1
+- scikit-learn >= 0.17.1
+- json >=2.0.9
+
 ## How to Use
 
 **1、Preprocess**
