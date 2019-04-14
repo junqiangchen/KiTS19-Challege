@@ -26,7 +26,8 @@ def predict():
     Vnet3d = Vnet3dModule(128, 128, 32, channels=1, costname=("dice coefficient",), inference=True,
                           model_path="log\segmeation\model\Vnet3d.pd")
     for index in range(imagedata.shape[0]):
-        mask_pd = Vnet3d.prediction(imagedata[index])
+        image_gt = np.load(imagedata[index])
+        mask_pd = Vnet3d.prediction(image_gt)
         mask_gt = np.load(maskdata[index])
         dice_value = calcu_dice(mask_pd, mask_gt)
         print("index,dice:", (index, dice_value))
