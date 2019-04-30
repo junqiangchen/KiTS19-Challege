@@ -4,7 +4,7 @@ import json
 import numpy as np
 from dataprocess.utils import file_name_path
 
-kits_path = "D:\Data\KiTS\kits19_download\data"
+kits_path = "E:\junqiangchen\data\kits19\kits19\data"
 image_name = "imaging.nii.gz"
 mask_name = "segmentation.nii.gz"
 

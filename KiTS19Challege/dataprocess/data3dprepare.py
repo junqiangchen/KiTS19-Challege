@@ -160,10 +160,10 @@ def preparetraindata():
     height = 512
     width = 512
     number = 210
-    srcpath = "D:\Data\KiTS\kits19process\Image\\"
-    maskpath = "D:\Data\KiTS\kits19process\Mask\\"
-    trainImage = "D:\Data\KiTS\kits19segmentation\Image"
-    trainMask = "D:\Data\KiTS\kits19segmentation\Mask"
+    srcpath = "E:\junqiangchen\data\kits19\kits19process\Image\\"
+    maskpath = "E:\junqiangchen\data\kits19\kits19process\Mask\\"
+    trainImage = "E:\junqiangchen\data\kits19\kits19segmentation\Image"
+    trainMask = "E:\junqiangchen\data\kits19\kits19segmentation\Mask"
     prepare3dtraindata(srcpath, maskpath, trainImage, trainMask, number, height, width, (32, 128, 128), 6, 20)
 
 

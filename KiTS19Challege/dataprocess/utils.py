@@ -50,4 +50,4 @@ def save_file2csv(file_dir, file_name):
         out_file_mask_path = file_mask_dir + "/" + file_paths[index]
         out.writelines(out_file_image_path + "," + out_file_mask_path + "\n")
 
-# save_file2csv("D:\Data\KiTS\kits19segmentation", "trainSegmentation.csv")
+#save_file2csv("E:\junqiangchen\data\kits19\kits19segmentation", "trainSegmentation.csv")

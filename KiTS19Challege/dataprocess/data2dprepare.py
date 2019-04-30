@@ -119,7 +119,7 @@ def gen_subregion(srcimg, seg_image, trainimagefile, trainMaskfile, expandslice=
 
 def proKitsdata():
     expandslice = 5
-    kits_path = "D:\Data\KiTS\kits19_download\data"
+    kits_path = "E:\junqiangchen\data\kits19\kits19\data"
     image_name = "imaging.nii.gz"
     mask_name = "segmentation.nii.gz"
 
@@ -127,10 +127,10 @@ def proKitsdata():
     width_spacing = 'captured_pixel_width'
     slice_spacing = 'captured_slice_thickness'
 
-    proImage = "D:\Data\KiTS\kits19process\Image\\"
-    proMask = "D:\Data\KiTS\kits19process\Mask\\"
-    protumorImage = "D:\Data\KiTS\kits19tumorprocess\Image\\"
-    protumorMask = "D:\Data\KiTS\kits19tumorprocess\Mask\\"
+    proImage = "E:\junqiangchen\data\kits19\kits19process\Image\\"
+    proMask = "E:\junqiangchen\data\kits19\kits19process\Mask\\"
+    protumorImage = "E:\junqiangchen\data\kits19\kits19tumorprocess\Image\\"
+    protumorMask = "E:\junqiangchen\data\kits19\kits19tumorprocess\Mask\\"
     """
     load itk image,change z Spacing value to 1,and save image ,liver mask ,tumor mask
     :return:None
@@ -140,9 +140,9 @@ def proKitsdata():
     path_list = file_name_path(kits_path)
     kits_Spacings = getImageSpacing()
     # step3 get signal train image and mask
-    for subsetindex in range(len(path_list)):
+    for subsetindex in range(0, 210, 1):
         kits_subset_path = kits_path + "/" + str(path_list[subsetindex]) + "/"
-        # kits_subset_path = kits_path + "/" + "case_00160" + "/"
+        #kits_subset_path = kits_path + "/" + "case_00160" + "/"
         file_image = kits_subset_path + image_name
         # 1 load itk image and truncate value with upper and lower
         src = load_itkfilewithtrucation(file_image, 300, -200)

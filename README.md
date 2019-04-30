@@ -7,7 +7,7 @@ The following dependencies are needed:
 - numpy >= 1.11.1
 - SimpleITK >=1.0.1
 - opencv-python >=3.3.0
-- tensorflow-gpu ==1.0.0
+- tensorflow-gpu ==1.8.0
 - pandas >=0.20.1
 - scikit-learn >= 0.17.1
 - json >=2.0.9
@@ -29,9 +29,18 @@ The following dependencies are needed:
 
 * train and predict in the script of vnet3d_train.py and vnet3d_predict.py
 
+**3、Kidney Tumor Segmentation**
 
 ## Result
+**1、Kidney Segmentation**
+* the train loss
+![](kidney loss.png)
 
+* 200-209case dice value and result
+![](dice value.PNG)
+
+![kidney——result.PNG]
+**2、Kidney Tumor Segmentation**
 
 ## Contact
 * https://github.com/junqiangchen

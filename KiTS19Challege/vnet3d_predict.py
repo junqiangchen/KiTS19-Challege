@@ -2,7 +2,7 @@ from __future__ import print_function, division
 import os
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 from tensorflow.python.client import device_lib
 
 print(device_lib.list_local_devices())
@@ -24,7 +24,7 @@ def predict():
 
     dice_values = []
     Vnet3d = Vnet3dModule(128, 128, 32, channels=1, costname=("dice coefficient",), inference=True,
-                          model_path="log\segmeation\model\Vnet3d.pd")
+                          model_path="log\segmeation\model\Vnet3d.pd-20000")
     for index in range(imagedata.shape[0]):
         image_gt = np.load(imagedata[index])
         mask_pd = Vnet3d.prediction(image_gt)

@@ -241,6 +241,7 @@ class Vnet3dModule(object):
         sess = tf.InteractiveSession(config=tf.ConfigProto(allow_soft_placement=True, log_device_placement=False))
         summary_writer = tf.summary.FileWriter(logs_path, graph=tf.get_default_graph())
         sess.run(init)
+        saver.restore(sess, "E:\junqiangchen\project\KiTS19Challege\log\segmeation\model\Vnet3d.pd-100000")
 
         DISPLAY_STEP = 1
         index_in_epoch = 0
