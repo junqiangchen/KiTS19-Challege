@@ -35,13 +35,13 @@ The following dependencies are needed:
 **1、Kidney Segmentation**
 * the train loss
 
-![](kidney loss.png)
+![](kidneyloss.png)
 
 * 200-209case dice value and result
 
-![](dice value.PNG)
+![](dicevalue.PNG)
 
-![kidney——result.PNG]
+![](kidneresult.png)
 
 **2、Kidney Tumor Segmentation**
 
