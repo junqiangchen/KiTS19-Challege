@@ -19,8 +19,11 @@ The following dependencies are needed:
 * analyze the ct image,and get the slice thickness and window width and position:run the dataAnaly.py
 * keep Kidney region range image:run the data2dprepare.py
 * generate patch(128,128,32) kidney image and mask:run the data3dprepare.py
-* save patch image and mask into csv file:run the utils.py,like file trainSegmentation.csv
+* save patch image and mask into csv file: run the utils.py,like file trainSegmentation.csv
 * split trainSegmentation.csv into training set and test set:run subset.py
+* generate tumor image and mask:run the tumordata2dprepare.py
+* save tumor image and mask path into csv file: run the utils.py,like file traintumorSegmentation.csv
+* split traintumorSegmentation.csv into training set and test set
 
 **2、Kidney Segmentation**
 * the VNet model
@@ -30,6 +33,12 @@ The following dependencies are needed:
 * train and predict in the script of vnet3d_train.py and vnet3d_predict.py
 
 **3、Kidney Tumor Segmentation**
+* the VNet2d model
+
+![](3dVNet.png) 
+
+* train and predict in the script of vnet2d_tumor_train.py and vnet2d_tumor_predict.py
+
 
 ## Result
 **1、Kidney Segmentation**
