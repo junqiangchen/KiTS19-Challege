@@ -71,7 +71,7 @@ The following dependencies are needed:
 * 3d Kidney Tumor Segmentation inference:run the inference_vnet3d_tumor.py
 * this step get 3d tumor result
 
-**3.3 3d Kidney Tumor Segmentation**
+**3.3 Kidney Tumor Result Process**
 * remove Kidney Tumor Segmentation small object:run the segresultprocess.py remove2d3dtumorsmallobj function
 * calculate overlap between 2d tumor and 3d tumor reslut.
 * save the region of 2d tumor and 3d tumor reslut that connect overlap region.
