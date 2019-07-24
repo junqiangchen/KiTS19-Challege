@@ -33,7 +33,7 @@ def file_name_path(file_dir, dir=True, file=False):
 
 def save_file2csv(file_dir, file_name):
     """
-    save file path to csv,this is for segmentation
+    save file path to csv
     :param file_dir:preprocess data path
     :param file_name:output csv name
     :return:
@@ -51,4 +51,4 @@ def save_file2csv(file_dir, file_name):
         out.writelines(out_file_image_path + "," + out_file_mask_path + "\n")
 
 
-#save_file2csv("E:\junqiangchen\data\kits19\kits19tumorsegmentation", "traintumorSegmentation.csv")
+#save_file2csv("D:\Data\kits19\kits19tumor3dsegmentation", "traintumor3dSegmentation.csv")

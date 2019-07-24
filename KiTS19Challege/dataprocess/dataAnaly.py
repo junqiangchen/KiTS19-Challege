@@ -4,7 +4,7 @@ import json
 import numpy as np
 from dataprocess.utils import file_name_path
 
-kits_path = "E:\junqiangchen\data\kits19\kits19\data"
+kits_path = "D:\Data\kits19\kits19\\test_data"
 image_name = "imaging.nii.gz"
 mask_name = "segmentation.nii.gz"
 
@@ -71,18 +71,14 @@ def getImageSizeandSpacing():
     get image and spacing
     :return:
     """
-    kits_Spacings = getImageSpacing()
     path_list = file_name_path(kits_path)
     for subsetindex in range(len(path_list)):
         kits_subset_path = kits_path + "/" + str(path_list[subsetindex]) + "/"
         file_image = kits_subset_path + image_name
         src = sitk.ReadImage(file_image, sitk.sitkInt16)
         imageSize = src.GetSize()
-        for index in range(len(kits_Spacings)):
-            if str(path_list[subsetindex]) == kits_Spacings[index][case_id]:
-                widthspacing = kits_Spacings[index][width_spacing]
-                thickspacing = kits_Spacings[index][slice_spacing]
-                print("image size,widthspcing,thickspacing:", (imageSize, widthspacing, thickspacing))
+        imageSpacing = src.GetSpacing()
+        print("image size,image spcing:", (imageSize, imageSpacing))
 
 
 def getMaskLabelMaxValue():
@@ -101,7 +97,7 @@ def getMaskLabelMaxValue():
         max_value = np.max(seg_maskimage)
         print("max_mask_value:", max_value)
 
-
-#getMaskLabelMaxValue()
-#getImageSizeandSpacing()
-#getTrunctedThresholdValue()
+# run the program one by one
+# getMaskLabelMaxValue()
+# getImageSizeandSpacing()
+# getTrunctedThresholdValue()

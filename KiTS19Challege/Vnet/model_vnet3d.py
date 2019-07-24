@@ -224,7 +224,7 @@ class Vnet3dModule(object):
         return loss
 
     def train(self, train_images, train_lanbels, model_path, logs_path, learning_rate,
-              dropout_conv=0.8, train_epochs=5, batch_size=1):
+              dropout_conv=0.8, train_epochs=5, batch_size=1, imagenum=[4, 8]):
         if not os.path.exists(logs_path):
             os.makedirs(logs_path)
         if not os.path.exists(logs_path + "model\\"):
@@ -285,15 +285,15 @@ class Vnet3dModule(object):
 
                 gt_src = np.reshape(batch_xs[0], (self.image_depth, self.image_height, self.image_width))
                 gt_src = gt_src.astype(np.float32)
-                save_images(gt_src, [4, 8], path=logs_path + 'src_%d_epoch.png' % (i))
+                save_images(gt_src, imagenum, path=logs_path + 'src_%d_epoch.png' % (i))
 
                 gt = np.reshape(batch_ys[0], (self.image_depth, self.image_height, self.image_width))
                 gt = gt.astype(np.float32)
-                save_images(gt, [4, 8], path=logs_path + 'gt_%d_epoch.png' % (i))
+                save_images(gt, imagenum, path=logs_path + 'gt_%d_epoch.png' % (i))
 
                 result = np.reshape(pred[0], (self.image_depth, self.image_height, self.image_width))
                 result = result.astype(np.float32)
-                save_images(result, [4, 8], path=logs_path + 'predict_%d_epoch.png' % (i))
+                save_images(result, imagenum, path=logs_path + 'predict_%d_epoch.png' % (i))
 
                 save_path = saver.save(sess, model_path, global_step=i)
                 print("Model saved in file:", save_path)
