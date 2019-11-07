@@ -111,8 +111,7 @@ def gen_image_mask(srcimg, seg_image, index, shape, numberxy, numberz, trainImag
     # step 2 get subimages (numberxy*numberxy*numberz,64, 128, 128)
     srcimg = srcimg[start_pos:end_pos, :, :]
     seg_image = seg_image[start_pos:end_pos, :, :]
-    sub_srcimages = make_patch(srcimg, patch_block_size=shape, numberxy=numberxy, numberz=numberz)
-    sub_liverimages = make_patch(seg_image, patch_block_size=shape, numberxy=numberxy, numberz=numberz)
+    sub_srcimages,sub_liverimages = make_patch(srcimg, seg_image,patch_block_size=shape, numberxy=numberxy, numberz=numberz)
     # step 3 only save subimages (numberxy*numberxy*numberz,64, 128, 128)
     samples, imagez = np.shape(sub_srcimages)[0], np.shape(sub_srcimages)[1]
     for j in range(samples):
